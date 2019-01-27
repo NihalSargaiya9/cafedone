@@ -1,0 +1,13 @@
+<h3 ng-if="ic.error" class="text-center">Not Signed Up Yet. <a ui-sref='public.signup'>Sign up Now!</a></h3>
+<div class="" ng-hide="ic.error" style="
+    width: 80%;
+    margin: 0 auto;
+">
+  <h3>Full Name : {{ic.start_name}} {{ic.last_name}}</h3>
+  <h3>Email : {{ic.email}}</h3>
+  <h3>Phone No : {{ic.phone}}</h3>
+  <img src="https://resserver.herokuapp.com/images/{{ic.short_name}}.jpg" alt="">
+  <h3>Favorite Item Code : {{ic.short_name}}</h3>
+  <h3>Favorite Item Name : {{ic.name}}</h3>
+  <h3>Favorite Item description : {{ic.description}}</h3>
+</div>

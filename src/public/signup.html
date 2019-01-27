@@ -1,0 +1,37 @@
+<style media="screen">
+  .form-control{
+    margin:10px 0px;
+  }
+  input.ng-invalid {
+  background-color: pink;
+}
+input.ng-valid {
+  background-color: lightgreen;
+}
+</style>
+<div class="" style="
+    width: 30%;
+    margin: 0 auto;
+">
+<form class="" name="sform" novalidate>
+
+
+<input class="form-control" type="text" placeholder="First Name" name=fname required
+ng-model="su.fname" minlength=2>
+<span ng-if="(sform.fname.$error.required && sform.fname.$touched)">Firstname required</span>
+<input class="form-control" type="text" name=last placeholder="Last Name" ng-model="su.last" required>
+<span ng-if="(sform.last.$error.required && sform.last.$touched)">lastname required</span>
+
+<input class="form-control" type="email" name=email ng-model="su.email" placeholder="email address" required>
+<span ng-if="(sform.email.$error.email || sform.email.$error.required) && sform.email.$touched">
+  Invalid Email</span>
+
+<input class="form-control" type="number" minlength=10 ng-model=su.phone name=phone placeholder="Phone No" required>
+<span ng-if="(sform.phone.$error.required) && sform.phone.$touched">
+  Invalid phone Number</span>
+<input class="form-control" type="text" ng-model=su.fav name=fav placeholder="favorite dish">
+{{su.err}}<br>
+<button ng-disabled="sform.$invalid" type="submit" class="btn btn-primary mb-2" ng-click="su.get()">Confirm identity</button>
+</form>
+{{su.Success}}<br>
+</div>
