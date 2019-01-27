@@ -46,7 +46,6 @@ function MenuService($http, ApiPath,$q) {
       'pdata':data
     }
     service.users=user;
-    console.log(service.users);
   };
   service.getData=function () {
     return service.users;
